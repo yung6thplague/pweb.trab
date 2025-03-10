@@ -1,70 +1,172 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarefa HTLM-4</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+header, footer {
+    background-color: #501726;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-family: 'DIN Neuzeit Grotesk';
+}
 
-    <header>
-        <h1>Tarefa HTML - 4</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+}
 
-    <section>
-        <aside>
-            <h2>Barra Lateral</h2>
-            <p><span class="nome">Rodrigo Vieira</span> <span class="numero">52215</span></p>
-            <p><span class="nome">Uberaldo Kill</span> <span class="numero">51784</span></p>
-            <p><span class="nome">Gustavo Martins</span> <span class="numero">52994</span></p>
-        </aside>
-        
-        <article>
-            <h1>Artigo Principal</h1>
-            <h2>Universidade da Beira Interior: Um Pilar do Ensino Superior em Portugal</h2>
-            <p>A Universidade da Beira Interior (UBI) é uma instituição de ensino superior localizada na cidade da Covilhã, região centro de Portugal. Fundada em 1979, a UBI surgiu da transformação do Instituto Politécnico da Covilhã em universidade, consolidando-se como um centro de excelência na educação, investigação e inovação.</p>
-            <h2>Oferta Acadêmica e Infraestruturas</h2>
-            <p>A UBI disponibiliza uma ampla gama de cursos de graduação, mestrado e doutoramento, abrangendo áreas como Ciências, Engenharia, Artes e Letras, Ciências Sociais e Saúde. A universidade destaca-se pelos seus programas inovadores e pelo investimento contínuo na modernização das infraestruturas, que incluem laboratórios de ponta, bibliotecas bem equipadas e centros de investigação de referência.</p>
-            <h2>Investigação e Inovação</h2>
-            <p>A UBI tem um forte compromisso com a investigação científica, contando com diversos centros dedicados ao desenvolvimento de projetos de impacto nacional e internacional. As suas áreas de investigação incluem biotecnologia, nanotecnologia, inteligência artificial, design, economia e ciências médicas. A universidade colabora com empresas e instituições, promovendo a transferência de conhecimento para a sociedade.</p>
-            <h2>Vida Acadêmica e Relação com a Comunidade</h2>
-            <p>A UBI proporciona um ambiente dinâmico e multicultural, com estudantes provenientes de várias partes do mundo. A cidade da Covilhã, situada na encosta da Serra da Estrela, oferece um cenário propício ao estudo e à qualidade de vida, combinando tradição e modernidade. Além disso, a universidade mantém um forte vínculo com a comunidade local, incentivando projetos sociais, culturais e empresariais.</p>
-            <h2>Reconhecimento e Perspetivas Futuras</h2>
-            <p>A UBI tem recebido reconhecimento nacional e internacional pela qualidade do seu ensino e investigação. Com um foco crescente na internacionalização e na inovação tecnológica, a universidade continua a expandir as suas parcerias e a consolidar-se como uma referência no ensino superior em Portugal.
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.7rem;
+    transition: background 0.3s ease, transform 0.2s;
+    border-radius: 8px;
+}
 
-                Com um espírito inovador e uma forte ligação à região e ao mundo, a Universidade da Beira Interior reafirma-se como um polo de conhecimento e desenvolvimento, preparando profissionais altamente qualificados e contribuindo para o progresso da sociedade.
-                
-                </p>
-        </article>
-        
-        <form class="contact-form">
-            <h2>Contato</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" class="form-input" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" class="form-input" required>
-            
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" class="form-textarea" rows="4" required></textarea>
-            
-            <button type="submit" class="btn-enviar">Enviar</button>
-        </form>
-    </section>
+nav ul li a:hover {
+    background-color: #440f0f;
+    transform: scale(1.1);
+}
 
-    <footer>
-        <p>&copy; 2025 Tarefa HTML-4. Todos os direitos reservados.</p>
-    </footer>
+section {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    gap: 25px;
+    flex-wrap: nowrap;   
+    
+    border-radius: 10px;
+}
 
-</body>
-</html>
+aside {
+    flex: 1;
+    background: #2a405d;
+    padding: 20px;
+    border-radius: 10px;
+    order: -1;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+aside, article, .contact-form {
+    flex: 1; 
+    background: #7f99bc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    min-width: 300px; 
+}
+aside h2 {
+    border-bottom: 3px solid #1e3a5f; 
+    padding-bottom: 10px;
+    margin-bottom: 15px; 
+    display: inline-block; 
+    width: 100%;
+}
+aside p {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 1rem;
+    padding: 5px 0;
+}
+article h1 {
+    font-size: large;
+    border-bottom: 3px solid #1e3a5f; 
+    padding-bottom: 10px;
+    margin-bottom: 15px; 
+    display: inline-block; 
+    width: 100%;
+}
+
+article {
+    flex: 3;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.contact-form {
+    width: 40%;
+    left: 30%;
+    position:sticky;
+    justify-content: center;
+    max-width: none;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-family: 'DIN Neuzeit Grotesk';
+    color: #1e3a5f;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    color: #1e3a5f;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 95%;
+    padding: 12px;
+    border: 2px solid #cfd8e3;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s;
+    resize: none;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #1e3a5f;
+    outline: none;
+    box-shadow: 0 0 8px rgba(30, 58, 95, 0.3);
+}
+
+.btn-enviar {
+    display: block;
+    width: 100%;
+    background: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background: #0b1728;
+    transform: scale(1.05);
+}
+
+.btn-enviar:active {
+    background: #162b46;
+    transform: scale(0.98);
+}
+body {
+    justify-content: center;   
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    background: url('ubi.jpg') no-repeat center center fixed;
+    background-size: cover; 
+}
 
